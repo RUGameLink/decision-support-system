@@ -49,7 +49,7 @@ begin
 
   For i:=0 to tmA.Count-2 do
   For j:=0 to tmA.Count-2 do
-   if tmA.ValueFromIndex[i]<= tmA.ValueFromIndex[j+1] then
+   if tmA.ValueFromIndex[i]< tmA.ValueFromIndex[j+1] then
     tmA.Exchange(j+1,j+1)
    else
     tmA.Exchange(j, j);

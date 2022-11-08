@@ -52,7 +52,7 @@ begin
    if tmA.ValueFromIndex[i]<= tmA.ValueFromIndex[j+1] then
     tmA.Exchange(j+1,j+1)
    else
-    tmA.Exchange(j, j);
+    tmA.Exchange(j, j+1);
 
  Result:='';
  For i:=0 to tmA.Count-1 do

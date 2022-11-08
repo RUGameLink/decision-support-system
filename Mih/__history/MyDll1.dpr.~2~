@@ -25,7 +25,7 @@ begin
  //
  tmTs:=TStringList.Create;
  tmTs1:=TStringList.Create;
- tmA:=TStringList.Create;
+ tmA:=TStringList.Create;  //list a
  tmTs.Text:=data;
  for i:=0 to tmTs.Count-1 do
   begin
@@ -49,14 +49,14 @@ begin
 
   For i:=0 to tmA.Count-2 do
   For j:=0 to tmA.Count-2 do
-   if tmA.ValueFromIndex[i]<= tmA.ValueFromIndex[j+1] then
-    tmA.Exchange(j+1,j+1)
-   else
-    tmA.Exchange(j, j);
+   if tmA.ValueFromIndex[j]> tmA.ValueFromIndex[j+1] then
+    tmA.Exchange(j,j);
+
 
  Result:='';
  For i:=0 to tmA.Count-1 do
   Result:=Result+'-'+tmA.Names[i];
+//Result:='0=0';
 end;
 
 function About: WideString; stdcall;
